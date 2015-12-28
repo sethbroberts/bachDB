@@ -1,0 +1,79 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>BachDB</title>
+    <meta name="viewport" content="width=800, user-scalable=0"> 
+    <script src="bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="bower_components/d3.fisheye/fisheye/fisheye.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+    <!-- <img src="score.jpg"> -->
+
+    <div class="navleft">
+      <div id="title">
+        BachDB
+      </div>
+      <div id="controls1">
+        color by:
+        <select class="color">
+          <option value="Genre">Genre</option>
+          <option value="Key">Key</option>
+          <option value="Year">Year</option>
+          <option value="Forces">Forces</option>
+        </select>
+      </div>
+      <div id="controls2">
+        sort by:
+        <select class="sort-by">
+          <option value="Duration">Duration</option>
+          <option value="ID">ID</option>
+          <option value="Title">Title</option>
+          <option value="Genre">Genre</option>
+          <option value="Key">Key</option>
+          <option value="Year">Year</option>
+          <option value="Forces">Forces</option>
+        </select>
+      </div>
+      <div id="searchinput">
+        <form action="">
+          search:
+          <input type="text" placeholder="by bwv or title" id="searchstring">
+          <input type="submit" id="searchbutton">
+        </form>
+      </div>
+      <div id="instructions">
+        <p>Each dot represents a piece by Johann Sebastian Bach.</p>
+        <p>The size of the dot is roughly proportional to the piece's duration.</p>
+        <p>Dots can be recolored or sorted by the attributes above. You can search for a piece by bwv or title (e.g., 'bwv1', 'toccata and fugue').</p>
+        <p>Clicking on a dot will load a YouTube performance of the corresponding piece.</p>
+      </div>
+      <div id="playa">
+        <div style="width:300px;height:267px;">
+          <div>
+            <iframe width="300" height="267px" 
+              src="https://www.youtube.com/embed/D0oLsD-0zy4?rel=0">
+              <!-- src="https://www.youtube.com/watch?v=D0oLsD-0zy4" -->
+            </iframe>
+          </div>
+        </div>    
+      </div>
+      <!-- <div id="createdby"> 
+        created by: <a href="https://sethbroberts.github.io"> sbroberts </a>
+      </div> -->
+    </div>
+
+    <div class="bodyright">
+    </div>
+
+    <div id="inspiredby">
+      created by: <a href="https://sethbroberts.github.io"> sbroberts </a> |
+      inspired by: <a href="http://vctr.me"> vicapow </a>
+    </div>
+
+    <script src="bdb.js"></script>
+
+  </body>
+</html>
